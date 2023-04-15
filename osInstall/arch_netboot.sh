@@ -56,7 +56,7 @@ echo "$hostname" > /etc/hostname;
 echo "[multilib]" >> /etc/pacman.conf;
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf;
 
-bootctl install --esp-path=/bin/EFI;
+bootctl install --esp-path=/boot/EFI;
 
 pacman -Sy;
 
