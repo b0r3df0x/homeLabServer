@@ -11,7 +11,7 @@ hostname=XXXX
 echo -e "Arch Linux installer\nBy b0r3df0x\nFor a (soon to be) headless server.\n"
 
 read -p "What disk should I use? Type the path or press enter(Default: $defdisk):" disk
-disk=${disk:-/dev/sda}
+disk=${disk:-$defdisk}
 
 #echo $disk
 
@@ -31,7 +31,7 @@ mkfs.vfat -F32 ${disk}1
 mkswap ${disk}2
 mkfs.ext4 ${disk}3
 
-mount /mnt ${disk}3
+mount ${disk}3 /mnt
 swapon ${disk}2
 
 pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode #amd-ucode if running on AMD cpu
