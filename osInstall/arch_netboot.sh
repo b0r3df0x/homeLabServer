@@ -63,7 +63,7 @@ pacman -Sy;
 pacman -S --noconfirm nano neovim trash-cli htop neofetch btop p7zip unrar zsh zsh-completions\
  screen smartmontools pkgstats ufw clamav dmidecode gvfs gvfs-smb gvfs-mtp gpart cabextract ntfs-3g\
  jfsutils f2fs-tools exfatprogs reiserfsprogs udftools nilfs-utils tar git go jdk11-openjdk jdk17-openjdk\
- python-setuptools python-pip python-wheel nodejs php netbeans npm groovy nginx wpa_supplicant rsync samba wget net-tools\
+ python-setuptools python-pip python-wheel nodejs php npm groovy nginx wpa_supplicant rsync samba wget net-tools\
  dhclient bluez bluez-tools bluez-libs bluez-utils bluez-hid2hci bluez-plugins kismet\
  libvirt virt-install qemu-full qemu-arch-extra ffmpeg;
 
@@ -82,7 +82,7 @@ clear
 
 sync
 umount -R /mnt/boot/EFI
-umount -R /mmnt
+umount -R /mnt
 swapoff ${disk}2
 
 echo -e "ALL DONE!\a"
