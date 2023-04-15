@@ -36,8 +36,7 @@ swapon ${disk}2
 
 pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode #amd-ucode if running on AMD cpu
 
-mkdir /mnt/boot/EFI
-mount ${disk}1 /mnt/boot/EFI
+mount ${disk}1 /mnt/boot
 
 genfstab -U /mnt > /mnt/etc/fstab
 
@@ -56,7 +55,7 @@ echo "$hostname" > /etc/hostname;
 echo "[multilib]" >> /etc/pacman.conf;
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf;
 
-bootctl install --esp-path=/boot/EFI;
+bootctl install --esp-path=/boot;
 
 pacman -Sy;
 
@@ -81,7 +80,7 @@ passwd $user;'
 clear
 
 sync
-umount -R /mnt/boot/EFI
+umount -R /mnt/boot
 umount -R /mnt
 swapoff ${disk}2
 
