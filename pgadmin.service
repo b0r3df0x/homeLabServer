@@ -1,0 +1,10 @@
+[Unit]
+Description=pgAdmin4 Start
+After=network.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/pgadmin4/bin/python /opt/pgadmin4/bin/pgadmin4 start
+
+[Install]
+WantedBy=multi-user.target
