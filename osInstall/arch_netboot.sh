@@ -62,7 +62,7 @@ pacman -S --noconfirm efibootmgr os-prober mtools libisoburn fuse freetype2 dosf
  gvfs-smb gvfs-mtp gpart cabextract ntfs-3g jfsutils f2fs-tools exfatprogs reiserfsprogs udftools nilfs-utils\
  tar git go jdk11-openjdk jdk17-openjdk python-setuptools python-pip python-wheel nodejs php npm groovy nginx\
  wpa_supplicant rsync samba wget net-tools dhclient bluez bluez-tools bluez-libs bluez-utils bluez-hid2hci\
- bluez-plugins kismet libvirt virt-install qemu-full qemu-arch-extra ffmpeg;
+ bluez-plugins kismet libvirt virt-install qemu-full qemu-arch-extra ffmpeg usbutils;
  
 bootctl install --esp-path=/boot;
 
